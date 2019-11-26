@@ -1,0 +1,1 @@
+Simple blog system on Ruby on Rails
