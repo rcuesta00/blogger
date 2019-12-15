@@ -1,5 +1,11 @@
 <h1><%= @article.title %></h1>
 
+<p><%= image_tag @article.image.url(:medium) %></p>
+
+<p><%= @article.body %></p>
+
+<br />
+
 <p>
     Tags:
     <% @article.tags.each do |tag| %>
@@ -7,7 +13,7 @@
     <% end %>
 </p>
 
-<p><%= @article.body %></p>
+<br />
 
 <%= link_to "edit", edit_article_path(@article) %>
 
