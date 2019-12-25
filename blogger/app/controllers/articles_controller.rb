@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+
+    before_action :require_login, only: [:new, :create, :edit, :update, :destroy]
+
     include ArticlesHelper
     def index
         @articles = Article.all
@@ -42,7 +45,17 @@ class ArticlesController < ApplicationController
         @article.update(article_params)
 
         flash.notice = "Article '#{@article.title}' Updated!"
-
         redirect_to article_path(@article)
+        
     end
+
+    private
+
+    def require_login
+        unless logged_in?
+            flash.notice = "You must be logged in to access this section"
+                redirect_to articles_path
+        end
+    end
+
 end

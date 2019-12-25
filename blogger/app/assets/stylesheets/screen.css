@@ -22,7 +22,11 @@ ol,ul {
     list-style:none
 }
     
-table{border-collapse:separate;border-spacing:0;vertical-align:middle}
+table{
+    border-collapse:separate;
+    border-spacing:10px;
+    vertical-align:middle
+}
 
 caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}
 
@@ -184,7 +188,6 @@ h1,h2,h3,h4,h5,h6{font-weight:bold}
     font-weight:bold;
     display:block;
     color:#aaa;
-    /* color:#2d4159; */
     padding-bottom:.1em
 }
 
